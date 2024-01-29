@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('your-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Add a higher z-index value to bring the navigator in front of the video background */
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: contain; /* Hide any overflow outside the viewport */
+        }   
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100vw;
+            min-height: 100vh;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire viewport without stretching */
+        }        
+        .form-container {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            height: 170px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .welcome-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            border-radius: 5px;
+            margin-bottom: 3px;
+        }
+        .text-box {
+            margin: 0;
+            text-align: left;
+            padding: 0px;
+        }
+        form {
+            width: 100%;
+        }
+        .header-title, nav ul li a {
+            font-family: Georgia, serif; /* Specify your font family */
+            font-size: 24px; /* Adjust font size as needed */
+            color: white; /* Adjust text color as needed */
+            text-shadow: 2px 2px 4px black; /* Adjust text shadow as needed */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 20px;
+        }
+
+        .logo {
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #000000;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #333;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #fdfdfd;
+            color: #fff;
+        }
+
+        /* ... rest of the CSS code ... */
+    </style>
+</head>
+    <style>
+        @font-face { font-family: JuneBug; src: url('JUNEBUG.TTF'); } 
+        h1 {font-family: JuneBug}
+    </style>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="C:\Users\nikol\OneDrive\Documents\Scrips\dior video shorted.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <header>
+        <nav>
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="logo">
+                <img src="logo.png" alt="Logo">
+              </div>
+              <ul class="nav-links">
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="ourteam.html">Our Team</a></li>
+                <li><a href="commitments.html">Our Commitments</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="you.html">You</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <div class="form-container">
+        <div class="welcome-text">
+            <div class="text-box">
+                Welcome to the brand new Parfum Christian Dior Careers website!
+                Embark on a scented journey with us.
+                Explore exciting career opportunities that align with your passion and expertise. Your career story begins here.
+                No time to venture out now? Just answer these three questions and leave us your e-mail address.
+            </div>
+        </div>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="100" required>
+
+            <label for="education">Education Level:</label>
+            <select id="education" name="education" required>
+                <option value="">Select an option</option>
+                <option value="high-school">High School</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">Ph.D.</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
