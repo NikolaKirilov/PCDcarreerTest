@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* Style for the title and navigation tabs */
+        /* Ensure the video fills the entire screen and doesn't disrupt layout */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden; /* Hide any overflow outside the viewport */
+        }   
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100vw;
+            min-height: 100vh;
+            width: auto;
+            height: auto;
+            object-fit: contain; /* Cover the entire viewport without stretching */
+        }
+
+        .header-title, nav ul li a {
+            font-family: Georgia, serif; /* Specify your font family */
+            font-size: 24px; /* Adjust font size as needed */
+            color: white; /* Adjust text color as needed */
+            text-shadow: 2px 2px 4px black; /* Adjust text shadow as needed */
+        }
+
+        /* Additional styles for navigation tabs */
+        nav ul li a {
+            text-decoration: none; /* Remove underline from links */
+            padding: 5px 10px; /* Add some padding for better appearance */
+            border-radius: 5px; /* Optional: add rounded corners */
+            transition: background-color 0.3s; /* Smooth background color transition on hover */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slight background highlight on hover */
+        }
+
+        /* Place the navigation at the very top */
+        header {
+            background-color: transparent; /* Transparent background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-around; /* Space items equally */
+            flex-direction: column; /* Stack items vertically */
+        }
+
+        nav {
+            background-color: transparent;
+            padding: 10px;
+            order: -1; /* Place navigation before the header content */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* Use flexbox for equal spacing */
+            justify-content: space-around; /* Space items equally */
+            width: 100%; /* Take full width of the header */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        /* Set the background image for the body */
+        body {
+            background-image: url('path-image.jpg'); /* Update with your image path */
+            background-size: cover;
+            background-position: center;
+            margin: 0; /* Remove default margin */
+            position: relative; /* Needed for absolute positioning of slogan */
+        }
+
+        /* Position the slogan in the middle of the page */
+        .slogan {
+            text-align: center; /* Center the slogan horizontally */
+            position: relative; /* Position relative to its normal position */
+            padding: 100px 0; /* Add padding to position vertically */
+            font-size: 24px; /* Adjust font size as needed */
+            color: white; /* Adjust text color as needed */
+            text-shadow: 2px 2px 4px black; /* Adjust text shadow as needed */
+        }
+
+        .slogan h2 {
+            white-space: nowrap; /* Prevents the text from wrapping */
+            overflow: hidden; /* Hides any overflow */
+            text-overflow: ellipsis; /* Adds an ellipsis if the text is too long */
+            max-width: 100%; /* Sets the maximum width of the slogan */
+            font-size: 24px; /* Adjust the font size as needed */
+    /* ... other styles ... */
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="C:\Users\nikol\OneDrive\Documents\Scrips\dior video shorted.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <header>
+        <!-- Navigation tabs -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="ourteam.html">Our Team</a></li>
+                <li><a href="commitments.html">Our Commitments</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="you.html">You</a></li>
+                <!-- Add other tabs as needed -->
+            </ul>
+        </nav>
+
+    </header>
+<!-- Slogan moved to the body -->
+    <div class="slogan">
+        <h2>PARFUMS CHRISTIAN DIOR</h2>
+    </div>
+<!-- ... rest of your content ... -->
+</body>
+</html>
+
